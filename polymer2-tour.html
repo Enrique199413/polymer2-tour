@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="polymer2-tour">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `polymer2-tour`
+     * Is a tour like to bootstrap-tour.js
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class Polymer2Tour extends Polymer.Element {
+      static get is() { return 'polymer2-tour'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'polymer2-tour'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(Polymer2Tour.is, Polymer2Tour);
+  </script>
+</dom-module>
